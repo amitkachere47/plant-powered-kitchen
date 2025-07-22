@@ -18,7 +18,7 @@ const Header = () => {
         </Link>
 
         {/* Desktop Navigation */}
-        <nav className="hidden md:flex items-center space-x-8">
+        <nav className="hidden md:flex items-center space-x-6">
           <Link to="/" className="text-foreground hover:text-primary transition-colors">
             Home
           </Link>
@@ -26,10 +26,16 @@ const Header = () => {
             Products
           </Link>
           <Link to="/about" className="text-foreground hover:text-primary transition-colors">
-            About Us
+            About
           </Link>
           <Link to="/recipes" className="text-foreground hover:text-primary transition-colors">
             Recipes
+          </Link>
+          <Link to="/sustainability" className="text-foreground hover:text-primary transition-colors">
+            Sustainability
+          </Link>
+          <Link to="/blog" className="text-foreground hover:text-primary transition-colors">
+            Blog
           </Link>
           <Link to="/contact" className="text-foreground hover:text-primary transition-colors">
             Contact
@@ -37,12 +43,16 @@ const Header = () => {
         </nav>
 
         <div className="hidden md:flex items-center space-x-4">
-          <Button variant="outline" size="sm">
-            Store Locator
-          </Button>
-          <Button size="sm">
-            Shop Now
-          </Button>
+          <Link to="/store-locator">
+            <Button variant="outline" size="sm">
+              Store Locator
+            </Button>
+          </Link>
+          <Link to="/products">
+            <Button size="sm">
+              Shop Now
+            </Button>
+          </Link>
         </div>
 
         {/* Mobile Menu Button */}
@@ -77,7 +87,7 @@ const Header = () => {
               className="text-foreground hover:text-primary transition-colors"
               onClick={() => setIsMenuOpen(false)}
             >
-              About Us
+              About
             </Link>
             <Link 
               to="/recipes" 
@@ -87,6 +97,20 @@ const Header = () => {
               Recipes
             </Link>
             <Link 
+              to="/sustainability" 
+              className="text-foreground hover:text-primary transition-colors"
+              onClick={() => setIsMenuOpen(false)}
+            >
+              Sustainability
+            </Link>
+            <Link 
+              to="/blog" 
+              className="text-foreground hover:text-primary transition-colors"
+              onClick={() => setIsMenuOpen(false)}
+            >
+              Blog
+            </Link>
+            <Link 
               to="/contact" 
               className="text-foreground hover:text-primary transition-colors"
               onClick={() => setIsMenuOpen(false)}
@@ -94,12 +118,16 @@ const Header = () => {
               Contact
             </Link>
             <div className="flex flex-col space-y-2 pt-2">
-              <Button variant="outline" size="sm">
-                Store Locator
-              </Button>
-              <Button size="sm">
-                Shop Now
-              </Button>
+              <Link to="/store-locator">
+                <Button variant="outline" size="sm" className="w-full">
+                  Store Locator
+                </Button>
+              </Link>
+              <Link to="/products">
+                <Button size="sm" className="w-full">
+                  Shop Now
+                </Button>
+              </Link>
             </div>
           </nav>
         </div>
